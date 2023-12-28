@@ -49,23 +49,19 @@ namespace Sms.Infrastructure.Api.Configuration
             .AddScoped<IEmailHistoryRepository, EmailHistoryRepository>()
             .AddScoped<ISmsHistoryRepository, SmsHistoryRepository>();
 
-            // register brokers
             builder.Services.AddScoped<ISmsSenderBroker, TwilioSmsSenderBroker>()
                 .AddScoped<IEmailSenderBroker, SmtpEmailSenderBroker>();
 
-            // register data access foundation services
             builder.Services.AddScoped<ISmsTemplateService, SmsTemplateService>()
                 .AddScoped<IEmailTemplateService, EmailTemplateService>()
                 .AddScoped<IEmailHistoryService, EmailHistoryService>()
                 .AddScoped<ISmsHistoryService, SmsHistoryService>();
 
-            // register helper foundation services
             builder.Services.AddScoped<IEmailSenderService, EmailSenderService>()
                 .AddScoped<ISmsSenderService, SmsSenderService>()
                 .AddScoped<IEmailRenderingService, EmailRenderingService>()
                 .AddScoped<ISmsRenderingService, SmsRenderingService>();
 
-            // register orchestration and aggregation services
             builder.Services.AddScoped<ISmsOrchestrationService, SmsOrchestrationService>()
                 .AddScoped<IEmailOrchestrationService, EmailOrchestrationService>()
                 .AddScoped<INotificationAggregatorService, NotificationAggregatorService>();

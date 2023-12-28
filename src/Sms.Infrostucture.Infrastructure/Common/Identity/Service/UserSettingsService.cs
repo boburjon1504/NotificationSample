@@ -1,11 +1,6 @@
 ﻿using Sms.Infrastructure.Domain.Entitys;
 using Sms.Infrastructure.Persistanse.Repsitory.Interface;
 using Sms.Infrustructure.Application.Common.Identity.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sms.Infrostucture.Infrastructure.Common.Identity.Service;
 public class UserSettingsService:IUserSettingsService
