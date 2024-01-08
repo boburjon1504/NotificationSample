@@ -19,7 +19,7 @@ namespace Sms.Infrastructure.Api.Configuration
         private static WebApplicationBuilder AddNotificationInfrosturcture(this WebApplicationBuilder builder)
         {
 
-            builder.Services.AddDbContext<NotificationDbContext>(option=>option.UseNpgsql(builder.Configuration.GetConnectionString("DefaoultConnection")));
+            builder.Services.AddDbContext<NotificationDbContext>(option=>option.UseNpgsql(builder.Configuration.GetConnectionString("DefoultConnection")));
             builder.Services.
                 AddScoped<ISmsSenderBroker, TwilioSmsSenderBroker>();
 
